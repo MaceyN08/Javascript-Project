@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Enhanced Battleship</title>
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">⚓ Enhanced Battleship ⚓</h1>
+            <div class="game-stats">
+                <div class="stat-item">
+                    <strong>Shots Fired:</strong> <span id="shots">0</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Hits:</strong> <span id="hits">0</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Ships Sunk:</strong> <span id="sunk">0</span>/5
+                </div>
+                <div class="stat-item">
+                    <strong>Accuracy:</strong> <span id="accuracy">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="boards-container">
+            <div class="board-section">
+                <h2 class="board-title">🎯 Enemy Waters</h2>
+                <div id="enemyBoard" class="game-board"></div>
+                <div class="ship-info">
+                    <div class="ship-type">🚢 Carrier (5)</div>
+                    <div class="ship-type">🛥️ Battleship (4)</div>
+                    <div class="ship-type">⛵ Cruiser (3)</div>
+                    <div class="ship-type">🚤 Submarine (3)</div>
+                    <div class="ship-type">🛶 Destroyer (2)</div>
+                </div>
+            </div>
+
+            <div class="board-section">
+                <h2 class="board-title">🏠 Your Fleet</h2>
+                <div id="playerBoard" class="game-board"></div>
+                <div class="powerup-info">
+                    <div><strong>⚡ Sonar Scan:</strong> <span id="sonarCount">2</span> remaining</div>
+                    <div><strong>💥 Air Strike:</strong> <span id="airStrikeCount">1</span> remaining</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" onclick="newGame()">🎮 New Game</button>
+            <button class="btn" onclick="useSonar()" id="sonarBtn">⚡ Sonar Scan</button>
+            <button class="btn" onclick="useAirStrike()" id="airStrikeBtn">💥 Air Strike</button>
+            <button class="btn danger" onclick="showRules()">📖 Rules</button>
+        </div>
+
+        <div class="message" id="message">
+            Welcome to Enhanced Battleship! Your fleet is deployed. Find and sink all enemy ships to win!
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
